@@ -1,24 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="jogojulias.MainPage">
+             x:Class="jogojulias.MainPage"
+             Shell.NavBarIsVisible="False">
 <Grid>
    <Image Source="fotocapa.png"
-          Opacity=".6"
+          Opacity=".8"
           Aspect="AspectFill"/>
    <Label Text="O Mistério da Ilha Esquecida"
-          TextColor="Black"
-          Margin="10"
-          FontFamily="SmileNice"
+          TextColor="#2f2f36"
+          Margin="20,170,20,0"
+          FontFamily="Thurkle"
           FontSize="50"
+          LineHeight="1.5"
           HorizontalOptions="Center"
           HorizontalTextAlignment="Center"
-          VerticalOptions="Center"/>
+          VerticalOptions="Start"/>
    <VerticalStackLayout
           VerticalOptions="End"
-          Spacing="10"
-          Margin="10,25,10,25">
+          Spacing="15"
+          Margin="15,0,15,40">
+  <Button  Text="Iniciar"
+           
+           HeightRequest="50"
+           CornerRadius="25"
+           BackgroundColor="#2f2f36"
+           TextColor="White"
+           BorderWidth="1"
+           BorderColor="White"
+           Margin="0,0,0,10"
+           FontSize="18"
+           FontFamily="CachetStdBold"/>
+
+  
+
+      <Button Text="Sobre"
+              Clicked="BotaoSobreFoiClicado"
+              BorderColor="White"
+              BorderWidth="1"
+              HeightRequest="50"
+              CornerRadius="25"
+              BackgroundColor="#2f2f36"
+              TextColor="White"
+              FontSize="16"
+              FontFamily="CachetStdBold"/>
     </VerticalStackLayout>
+
+
+
 </Grid>
 
 </ContentPage>

@@ -44,10 +44,46 @@
               TextColor="White"
               FontSize="16"
               FontFamily="CachetStdBold"/>
+
     </VerticalStackLayout>
 
 
+<Frame x:Name="frameSobre"
+   IsVisible="False"
+   Margin="10,20"
+   CornerRadius="20"
+   BackgroundColor="#3f343a"
+   HorizontalOptions="Fill"
+   VerticalOptions="Fill">
 
+ <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="90"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label Text="Sobre"
+              TextColor="White"
+              Margin="20"
+              FontSize="40"
+              FontFamily="MondayFiesta"
+              HorizontalOptions="Center"
+              HorizontalTextAlignment="Center"
+              Grid.Row="0"/>
+
+               <Label Text="Aplicativo criado por Julia Reis Da Silva e Julia Rihane Santana, visando o aprendizado da linguagem c#, em aulas de desenvolvimento de aplicativos no terceiro ano do ensino médio."
+               CharacterSpacing="1"
+               LineHeight="1.5"
+               TextColor="White"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Center"
+               FontSize="25"
+               FontFamily="CachetStdBold"
+               Grid.Row="1"/>
+
+</Grid>
+</Frame>
 </Grid>
 
 </ContentPage>

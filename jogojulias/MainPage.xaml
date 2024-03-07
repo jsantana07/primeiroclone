@@ -20,8 +20,9 @@
           VerticalOptions="End"
           Spacing="15"
           Margin="15,0,15,40">
+
   <Button  Text="Iniciar"
-           
+           Clicked="BotaoIniciarFoiClicado"
            HeightRequest="50"
            CornerRadius="25"
            BackgroundColor="#2f2f36"
@@ -52,7 +53,7 @@
    IsVisible="False"
    Margin="10,20"
    CornerRadius="20"
-   BackgroundColor="#3f343a"
+   BackgroundColor="#885bc7"
    HorizontalOptions="Fill"
    VerticalOptions="Fill">
 
@@ -79,8 +80,19 @@
                HorizontalTextAlignment="Center"
                VerticalOptions="Center"
                FontSize="25"
-               FontFamily="CachetStdBold"
+               FontFamily="Room Handmade"
                Grid.Row="1"/>
+
+                 <Button Text="voltar"
+                 Clicked="BotaoVoltarFoiClicado"
+                HeightRequest="50"
+                CornerRadius="25"
+                BackgroundColor="#4d3173"
+                TextColor="White"
+                Margin="0,0,0,10"
+                FontSize="18"
+                FontFamily="CachetStdBold"
+                Grid.Row="3"/>
 
 </Grid>
 </Frame>

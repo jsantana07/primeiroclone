@@ -12,6 +12,13 @@ public partial class MainPage : ContentPage
   {
     frameSobre.IsVisible = true;
   }
-
-
+  private void BotaoVoltarFoiClicado(object sender, EventArgs args)
+  {
+    frameSobre.IsVisible = false;
+  }
+ private void BotaoIniciarFoiClicado(object sender, EventArgs args)
+  {
+    if (Application.Current != null)
+      Application.Current.MainPage = new JogoPage();
+  }
 }

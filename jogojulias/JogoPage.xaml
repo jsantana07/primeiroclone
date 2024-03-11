@@ -5,9 +5,28 @@
              BackgroundColor="Black"
              Shell.NavBarIsVisible="false">
 
-    <Image Source="fotobarco1.jpg"
+<Grid>
+    <Image Source="foto1barco.jpg"
            Opacity=".6"
            Aspect="AspectFill"/>
 
+
+ <Frame x:Name="FrameTextoBarco"
+   IsVisible="True"
+   Margin="10,20"
+   CornerRadius="20"
+   BackgroundColor="#2f2f36"
+   HorizontalOptions="Fill"
+   VerticalOptions="Start">
+
+    <Label Text="Durante um passeio de barco em suas férias, você e seu irmão Lucas passam por uma intensa tempestade, o que desestabiliza a embarcação..."
+          TextColor="White"
+          FontSize="32"
+           FontFamily="Room Handmade"
+          VerticalOptions="Start"
+          BackgroundColor="Transparent"/>
+          
+</Frame>
+</Grid>
      </ContentPage>        
            

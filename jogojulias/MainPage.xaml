@@ -4,22 +4,24 @@
              x:Class="jogojulias.MainPage"
              Shell.NavBarIsVisible="False">
 <Grid>
-   <Image Source="fotocapa.png"
-          Opacity=".8"
-          Aspect="AspectFill"/>
-   <Label Text="O Mistério da Ilha Esquecida"
-          TextColor="#2f2f36"
-          Margin="20,170,20,0"
-          FontFamily="Thurkle"
-          FontSize="50"
-          LineHeight="1.5"
-          HorizontalOptions="Center"
-          HorizontalTextAlignment="Center"
-          VerticalOptions="Start"/>
-   <VerticalStackLayout
-          VerticalOptions="End"
-          Spacing="15"
-          Margin="15,0,15,40">
+       <Image Source="fotocapa.png"
+              Opacity=".8"
+              Aspect="AspectFill"/>
+
+       <Label Text="O Mistério da Ilha Esquecida"
+              TextColor="#2f2f36"
+              Margin="20,170,20,0"
+              FontFamily="Thurkle"
+              FontSize="50"
+              LineHeight="1.5"
+              HorizontalOptions="Center"
+              HorizontalTextAlignment="Center"
+              VerticalOptions="Start"/>
+
+       <VerticalStackLayout
+              VerticalOptions="End"
+              Spacing="15"
+              Margin="15,0,15,40">
 
   <Button  Text="Iniciar"
            Clicked="BotaoIniciarFoiClicado"
@@ -49,28 +51,28 @@
     </VerticalStackLayout>
 
 
-<Frame x:Name="frameSobre"
-   IsVisible="False"
-   Margin="10,20"
-   CornerRadius="20"
-   BackgroundColor="#885bc7"
-   HorizontalOptions="Fill"
-   VerticalOptions="Fill">
+              <Frame x:Name="frameSobre"
+              IsVisible="False"
+              Margin="10,20"
+              CornerRadius="20"
+              BackgroundColor="#885bc7"
+              HorizontalOptions="Fill"
+              VerticalOptions="Fill">
 
  <Grid>
-        <Grid.RowDefinitions>
-          <RowDefinition Height="90"/>
-          <RowDefinition Height="*"/>
-          <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
-        <Label Text="Sobre"
-              TextColor="White"
-              Margin="20"
-              FontSize="40"
-              FontFamily="MondayFiesta"
-              HorizontalOptions="Center"
-              HorizontalTextAlignment="Center"
-              Grid.Row="0"/>
+              <Grid.RowDefinitions>
+              <RowDefinition Height="90"/>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="60"/>
+              </Grid.RowDefinitions>
+              <Label Text="Sobre"
+               TextColor="White"
+               Margin="20"
+               FontSize="40"
+               FontFamily="MondayFiesta"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Grid.Row="0"/>
 
                <Label Text="Aplicativo criado por Julia Reis Da Silva e Julia Rihane Santana, visando o aprendizado da linguagem c#, em aulas de desenvolvimento de aplicativos no terceiro ano do ensino médio."
                CharacterSpacing="1"

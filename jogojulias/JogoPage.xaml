@@ -5,28 +5,69 @@
              BackgroundColor="Black"
              Shell.NavBarIsVisible="false">
 
-<Grid>
-    <Image Source="foto1barco.jpg"
-           Opacity=".6"
-           Aspect="AspectFill"/>
+ <Grid>
+   <Grid.RowDefinitions>
+       <RowDefinition Height="*"/>
+       <RowDefinition Height="60"/>
+       <RowDefinition Height="60"/>
+       <RowDefinition Height="60"/>
+     </Grid.RowDefinitions> 
 
+    <Frame BackgroundColor="White"
+           CornerRadius="20"
+           Margin="5,10"
+           VerticalOptions="Fill"
+           Grid.Row="0">
+      <Label x:Name="labelTexto"
+            TextColor="White"
+            LineHeight="1.2"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            VerticalOptions="Center"
+            FontSize="20"
+            FontFamily="CachetStdBold"/>
+    </Frame>
 
- <Frame x:Name="FrameTextoBarco"
-   IsVisible="True"
-   Margin="10,20"
-   CornerRadius="20"
-   BackgroundColor="#2f2f36"
-   HorizontalOptions="Fill"
-   VerticalOptions="Start">
+     <Button x:Name="botaoProximo"
+            
+            Text="próximo"
+            BackgroundColor="Black"
+            BorderWidth="1"
+            BorderColor="White"
+            Margin="20,0"
+            TextColor="White"
+            FontSize="16"
+            HeightRequest="50"
+            CornerRadius="25"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"
+            Grid.Row="1"/>
 
-    <Label Text="Durante um passeio de barco em suas férias, você e seu irmão Lucas passam por uma intensa tempestade, o que desestabiliza a embarcação..."
-          TextColor="White"
-          FontSize="32"
-           FontFamily="Room Handmade"
-          VerticalOptions="Start"
-          BackgroundColor="Transparent"/>
+             <Button x:Name="BotaoPrimeiraOpcao"
           
-</Frame>
+            BackgroundColor="Black"
+            TextColor="White"
+            HeightRequest="50"
+            CornerRadius="10"
+            Margin="5,0"
+            FontSize="16"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"
+            Grid.Row="2"/>
+
+    <Button x:Name="BotaoSegundaOpcao"
+            
+            BackgroundColor="Black"
+            TextColor="White"
+            HeightRequest="50"
+            CornerRadius="10"
+            Margin="5,0"
+            FontSize="16"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"
+            Grid.Row="3"/>
+          
+
 </Grid>
      </ContentPage>        
            

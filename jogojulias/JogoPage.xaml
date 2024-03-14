@@ -13,19 +13,27 @@
        <RowDefinition Height="60"/>
      </Grid.RowDefinitions> 
 
-    <Frame BackgroundColor="White"
+    <Frame 
+          Padding="0"
+           BackgroundColor="White"
            CornerRadius="20"
            Margin="5,10"
            VerticalOptions="Fill"
-           Grid.Row="0">
-      <Label x:Name="labelTexto"
-            TextColor="White"
-            LineHeight="1.2"
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            VerticalOptions="Center"
-            FontSize="20"
-            FontFamily="CachetStdBold"/>
+           Grid.Row="0"
+           Grid.RowSpan="4">
+        <Grid>
+                <Image x:Name="imagem"
+                
+                Aspect="AspectFill"/>
+                <Label x:Name="labelTexto"
+                        TextColor="Black"
+                        LineHeight="1.2"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        FontSize="20"
+                        FontFamily="Room Handmade"/>
+        </Grid>
     </Frame>
 
      <Button x:Name="botaoProximo"
@@ -41,7 +49,7 @@
             CornerRadius="25"
             HorizontalOptions="Fill"
             FontFamily="CachetStdBold"
-            Grid.Row="1"/>
+            Grid.Row="2"/>
 
              <Button x:Name="BotaoPrimeiraOpcao"
           
@@ -66,7 +74,6 @@
             HorizontalOptions="Fill"
             FontFamily="CachetStdBold"
             Grid.Row="3"/>
-          
 
 </Grid>
      </ContentPage>        

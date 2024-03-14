@@ -5,9 +5,9 @@ public class LinhaHistoria
    public bool TemFoto = false; 
    public string? UrlDaFoto; 
    public bool TemEscolha = false;
-   public string? TextoDaResposta01;
-   public string? TextoDaResposta02;
-    public int IdLevelResposta01;
-    public int IdLevelResposta02;
+   public string? TextoDaPrimeiraOpcao;
+   public string? TextoDaSegundaOpcao;
+    public int IdLevelPrimeiraOpcao;
+    public int IdLevelSegundaOpcao;
    public bool PersonagemPerdeu = false;
    }

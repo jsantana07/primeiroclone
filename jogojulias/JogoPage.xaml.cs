@@ -15,7 +15,8 @@ public partial class JogoPage : ContentPage
 			Texto ="Durante um passeio de barco em suas férias, você e seu irmão Lucas passam por uma intensa tempestade, o que desestabiliza a embarcação...",
 			TemEscolha=false,
 			TemFoto=true,
-			UrlDaFoto="foto1barco.jpg"
+			UrlDaFoto="foto1barco.jpg",
+			IdLevelProximo=1
 		});
 
 		historia.Add(new LinhaHistoria()
@@ -66,4 +67,8 @@ public partial class JogoPage : ContentPage
 		LinhaHistoriaAtual = historia.Where(d => d.Id == id).First();
 		PreencherPagina();
 	}    
+	void BotaoProximoClicado (object sender, EventArgs args)
+  {
+   TrocaLinhaHistoriaAtual(LinhaHistoriaAtual.IdLevelProximo);
+  }
 }

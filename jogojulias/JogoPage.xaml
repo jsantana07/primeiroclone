@@ -22,24 +22,32 @@
            Grid.Row="0"
            Grid.RowSpan="4">
         <Grid>
-                <Image x:Name="imagem"
-                
+                <Image x:Name="imagem"  
                 Aspect="AspectFill"/>
+
+                 <Frame CornerRadius="20"
+                        Margin="10,30,10,0"
+                        VerticalOptions="Start"
+                         BackgroundColor="#2f2f36">
+
                 <Label x:Name="labelTexto"
-                        TextColor="Black"
+                         BackgroundColor="#2f2f36"
+                        TextColor="White"
                         LineHeight="1.2"
                         HorizontalOptions="Center"
                         HorizontalTextAlignment="Center"
-                        VerticalOptions="Center"
-                        FontSize="20"
+                        VerticalOptions="Start"
+                        FontSize="30"
                         FontFamily="Room Handmade"/>
+                         </Frame>
         </Grid>
     </Frame>
 
      <Button x:Name="botaoProximo"
             
             Text="próximo"
-            BackgroundColor="Black"
+            Clicked="BotaoProximoClicado"
+            BackgroundColor="#2f2f36"
             BorderWidth="1"
             BorderColor="White"
             Margin="20,0"

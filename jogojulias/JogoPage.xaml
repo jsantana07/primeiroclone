@@ -61,27 +61,61 @@
 
              <Button x:Name="BotaoPrimeiraOpcao"
           
-            BackgroundColor="Black"
+            BackgroundColor="#2f2f36"
+            Clicked="PrimeiroBotaoClicado"
             TextColor="White"
+            BorderWidth="1"
             HeightRequest="50"
-            CornerRadius="10"
+            CornerRadius="25"
             Margin="5,0"
             FontSize="16"
             HorizontalOptions="Fill"
             FontFamily="CachetStdBold"
+            BorderColor="White"
             Grid.Row="2"/>
 
     <Button x:Name="BotaoSegundaOpcao"
             
-            BackgroundColor="Black"
+            BackgroundColor="#2f2f36"
             TextColor="White"
+            Clicked="SegundoBotaoClicado"
+            BorderWidth="1"
             HeightRequest="50"
-            CornerRadius="10"
+            CornerRadius="25"
             Margin="5,0"
             FontSize="16"
             HorizontalOptions="Fill"
             FontFamily="CachetStdBold"
+            BorderColor="White"
             Grid.Row="3"/>
+
+              <Frame x:Name="frameperdeu"
+           IsVisible="false"
+           BorderColor="white"
+           BackgroundColor="Black"
+           Margin="15,0,15,20"
+           Grid.Row="1"
+           Grid.RowSpan="3">
+      <VerticalStackLayout>
+        <Label Text="Você perdeu!"
+              TextColor="White"
+              Margin="25"
+              FontSize="38"
+              FontFamily="CachetStdBold"
+              HorizontalOptions="Center"
+              HorizontalTextAlignment="Center"
+              VerticalOptions="Center"/>
+        <Button Text="começar de novo"
+                Clicked="BotaoRecomecarClicado"
+                BackgroundColor="#2f2f36"
+                TextColor="White"
+                HeightRequest="40"
+                CornerRadius="25"
+                FontSize="18"
+                HorizontalOptions="Fill"
+                FontFamily="CachetStdBold"/>
+      </VerticalStackLayout>
+    </Frame>
 
 </Grid>
      </ContentPage>        

@@ -16,18 +16,32 @@ public partial class JogoPage : ContentPage
 			TemEscolha=false,
 			TemFoto=true,
 			UrlDaFoto="foto1barco.jpg",
+			TamanhoFonte=30,
 			IdLevelProximo=1
 		});
 
 		historia.Add(new LinhaHistoria()
 		{
 			Id = 1,
-			Texto = "Desculpe tantas perguntas! Não vemos muitas pessoas diferentes por aqui! Você aceita água?",
+			Texto = "Após o naufrágio, você e seu irmão estão perdidos na ilha. Um morador local chamado Leo os aborda, e pergunta:vocês estão dispostos a desvendar os mistérios da ilha para encontrar o caminho de volta para casa?",
 			TemEscolha=true,
-			TextoDaPrimeiraOpcao="Sim, por favor",
-			TextoDaSegundaOpcao="Não, estou bem",
+			TemFoto=true,
+			UrlDaFoto="fotochegando.png",
+			TextoDaPrimeiraOpcao="Sim, aceitamos ",
+			TextoDaSegundaOpcao="Não, estamos bem",
+			TamanhoFonte=25,
 			IdLevelPrimeiraOpcao=2,
-			IdLevelSegundaOpcao=4998
+			IdLevelSegundaOpcao=50
+		});
+
+			historia.Add(new LinhaHistoria()
+			{
+			Id = 50,
+			Texto="Voce morreu de fome sem a ajuda do morador local",
+			TamanhoFonte=30,
+		    TemEscolha=false,
+			TemFoto=false,
+			PersonagemPerdeu=true
 		});
 
 		Iniciar();
@@ -40,7 +54,16 @@ public partial class JogoPage : ContentPage
      
 	void PreencherPagina()
     {
-    	labelTexto.Text = LinhaHistoriaAtual.Texto;
+
+		    labelTexto.Text = LinhaHistoriaAtual.Texto;
+
+		    if (LinhaHistoriaAtual.PersonagemPerdeu)
+      frameperdeu.IsVisible = true;
+    else
+      frameperdeu.IsVisible = false;
+
+
+		labelTexto.FontSize=LinhaHistoriaAtual.TamanhoFonte;
 
         if (LinhaHistoriaAtual.TemEscolha)
 		{
@@ -49,6 +72,7 @@ public partial class JogoPage : ContentPage
 			BotaoSegundaOpcao.IsVisible = true;
 			BotaoPrimeiraOpcao.Text =LinhaHistoriaAtual.TextoDaPrimeiraOpcao;
 			BotaoSegundaOpcao.Text =LinhaHistoriaAtual.TextoDaSegundaOpcao;
+
 		}
 		else
 		{
@@ -70,5 +94,17 @@ public partial class JogoPage : ContentPage
 	void BotaoProximoClicado (object sender, EventArgs args)
   {
    TrocaLinhaHistoriaAtual(LinhaHistoriaAtual.IdLevelProximo);
+  }
+  private void BotaoRecomecarClicado(object sender, EventArgs args)
+  {
+      Application.Current.MainPage = new MainPage();
+  }
+  void PrimeiroBotaoClicado(object sender, EventArgs args)
+  {
+    TrocaLinhaHistoriaAtual(LinhaHistoriaAtual.IdLevelPrimeiraOpcao);
+  }
+  void SegundoBotaoClicado(object sender, EventArgs args)
+  {
+   TrocaLinhaHistoriaAtual(LinhaHistoriaAtual.IdLevelSegundaOpcao);
   }
 }

@@ -9,7 +9,10 @@ public class LinhaHistoria
    public string? TextoDaSegundaOpcao;
     public int IdLevelPrimeiraOpcao;
     public int IdLevelSegundaOpcao;
-     public int IdLevelProximo;
+    
+     public int TamanhoFonte;
+
+    public int IdLevelProximo;
 
    public bool PersonagemPerdeu = false;
    }

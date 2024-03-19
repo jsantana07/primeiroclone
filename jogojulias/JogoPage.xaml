@@ -89,33 +89,74 @@
             BorderColor="White"
             Grid.Row="3"/>
 
-              <Frame x:Name="frameperdeu"
+      <Frame x:Name="frameperdeu"
            IsVisible="false"
            BorderColor="white"
-           BackgroundColor="Black"
+           BackgroundColor="#2f2f36"
            Margin="15,0,15,20"
            Grid.Row="1"
            Grid.RowSpan="3">
-      <VerticalStackLayout>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Label Text="Você perdeu!"
               TextColor="White"
-              Margin="25"
-              FontSize="38"
+              Margin="25,0"
+              FontSize="20"
               FontFamily="CachetStdBold"
               HorizontalOptions="Center"
               HorizontalTextAlignment="Center"
-              VerticalOptions="Center"/>
+              VerticalOptions="Center"
+              Grid.Row="0"/>
         <Button Text="começar de novo"
                 Clicked="BotaoRecomecarClicado"
-                BackgroundColor="#2f2f36"
+                BackgroundColor="Black"
                 TextColor="White"
+                Grid.Row="1"
                 HeightRequest="40"
                 CornerRadius="25"
                 FontSize="18"
                 HorizontalOptions="Fill"
                 FontFamily="CachetStdBold"/>
-      </VerticalStackLayout>
+      </Grid>
     </Frame>
+
+    <Frame x:Name="frameganhou"
+           IsVisible="false"
+           BorderColor="white"
+           BackgroundColor="#2f2f36"
+           Margin="15,0,15,20"
+           Grid.Row="1"
+           Grid.RowSpan="3">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Text="Você ganhou!"
+              TextColor="White"
+              Margin="25,0"
+              FontSize="20"
+              FontFamily="CachetStdBold"
+              HorizontalOptions="Center"
+              HorizontalTextAlignment="Center"
+              VerticalOptions="Center"
+              Grid.Row="0"/>
+        <Button Text="começar de novo"
+                Clicked="BotaoRecomecarClicado"
+                BackgroundColor="Black"
+                TextColor="White"
+                Grid.Row="1"
+                HeightRequest="40"
+                CornerRadius="25"
+                FontSize="18"
+                HorizontalOptions="Fill"
+                FontFamily="CachetStdBold"/>
+      </Grid>
+    </Frame>
+
 
 </Grid>
      </ContentPage>        

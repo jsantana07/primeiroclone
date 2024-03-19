@@ -14,5 +14,8 @@ public class LinhaHistoria
 
     public int IdLevelProximo;
 
+   
    public bool PersonagemPerdeu = false;
+   public bool PersonagemGanhou = false;
+
    }

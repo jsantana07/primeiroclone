@@ -38,11 +38,101 @@ public partial class JogoPage : ContentPage
 			{
 			Id = 50,
 			Texto="Voce morreu de fome sem a ajuda do morador local",
+			TemFoto=true,
+			UrlDaFoto="gameover.jpg",
 			TamanhoFonte=30,
 		    TemEscolha=false,
-			TemFoto=false,
 			PersonagemPerdeu=true
 		});
+
+			historia.Add(new LinhaHistoria()
+			{
+			Id = 2,
+			Texto="Vocês se deparam com a descoberta de ruínas antigas na ilha e são confrontados com a decisão de optar entre dois caminhos distintos: um rio com correnteza vigorosa e uma caverna.",
+			TemFoto=true,
+			UrlDaFoto="fotoescolhacaminho.png",
+			TamanhoFonte=30,
+		    TemEscolha=true,
+			PersonagemPerdeu=false,
+			TextoDaPrimeiraOpcao="Seguir pelo rio",
+			TextoDaSegundaOpcao="Adentrar a caverna",
+			IdLevelPrimeiraOpcao=60,
+			IdLevelSegundaOpcao=3
+		});
+			
+			historia.Add(new LinhaHistoria()
+			{
+			Id = 60,
+			Texto="Você morreu afogado devido a correnteza",
+			TemFoto=true,
+			UrlDaFoto="gameover.jpg",
+			TamanhoFonte=30,
+		    TemEscolha=false,
+			PersonagemPerdeu=true
+		});
+
+			historia.Add(new LinhaHistoria()
+			{
+			Id = 3,
+			Texto="Dentro da caverna, vocês deparam-se com escrituras antigas e um cofre enferrujado. Diante dessas descobertas, vocês têm a opção de investigar as escrituras ou abrir o cofre.",
+			TemFoto=true,
+			UrlDaFoto="escolhacaverna.png",
+			TamanhoFonte=30,
+		    TemEscolha=true,
+			PersonagemPerdeu=false,
+			TextoDaPrimeiraOpcao="Abrir o cofre",
+			TextoDaSegundaOpcao="Investigar as escrituras",
+			IdLevelPrimeiraOpcao=70,
+			IdLevelSegundaOpcao=4
+		});
+
+		historia.Add(new LinhaHistoria()
+			{
+			Id = 70,
+			Texto="Havia uma bomba pré ativada no cofre, vocês morreram devido a explosão",
+			TemFoto=true,
+			UrlDaFoto="gameover.jpg",
+			TamanhoFonte=30,
+		    TemEscolha=false,
+			PersonagemPerdeu=true
+		});
+		historia.Add(new LinhaHistoria()
+			{
+			Id = 4,
+			Texto="Ao investigarem as escrituras, vocês descobrem um mapa que leva a um tesouro de alto valor, além de encontrar o caminho de volta para casa.",
+			TemFoto=true,
+			UrlDaFoto="tesouro.jpg",
+			TamanhoFonte=30,
+		    TemEscolha=true,
+			PersonagemPerdeu=false,
+			TextoDaPrimeiraOpcao="Pegar o tesouro e voltar para casa",
+			TextoDaSegundaOpcao="Pegar o tesouro mas continuar na ilha",
+			IdLevelPrimeiraOpcao=5,
+			IdLevelSegundaOpcao=80
+		});
+		historia.Add(new LinhaHistoria()
+			{
+			Id = 80,
+			Texto="Um guardião da caverna recuperou o tesouro e tomou medidas extremas, resultando em sua perda de vida.",
+			TemFoto=true,
+			UrlDaFoto="gameover.jpg",
+			TamanhoFonte=30,
+		    TemEscolha=false,
+			PersonagemPerdeu=true
+		});
+		historia.Add(new LinhaHistoria()
+			{
+			Id = 5,
+			Texto="Você retornou a sua casa com o tesouro",
+			TemFoto=true,
+			UrlDaFoto="ultimafota.jpg",
+			TamanhoFonte=30,
+		    TemEscolha=false,
+			PersonagemGanhou=true
+		});
+		
+
+
 
 		Iniciar();
 	}
@@ -56,6 +146,11 @@ public partial class JogoPage : ContentPage
     {
 
 		    labelTexto.Text = LinhaHistoriaAtual.Texto;
+
+			if (LinhaHistoriaAtual.PersonagemGanhou)
+      frameganhou.IsVisible = true;
+    else
+      frameganhou.IsVisible = false;
 
 		    if (LinhaHistoriaAtual.PersonagemPerdeu)
       frameperdeu.IsVisible = true;
